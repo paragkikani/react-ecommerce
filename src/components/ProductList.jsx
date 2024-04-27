@@ -241,18 +241,22 @@ function ProductList() {
   const dispatch = useDispatch();
   const [filter, setFilter] = useState({});
   useEffect(() => {
-    dispatch(fetchAllProductsAsync());
-  }, [dispatch]);
+    dispatch(fetchAllFilterProductsAsync(filter));
+  }, [dispatch, filter]);
 
   function handleOnSortChnage(e, option) {
     const newFilter = { ...filter, _sort: option.sort };
     setFilter(newFilter);
-    dispatch(fetchAllFilterProductsAsync(newFilter));
   }
   function handleOnFilterChange(e, section, option) {
-    const newFilter = { ...filter, [section]: option };
+    let newFilter = { ...filter };
+    if (e.target.checked) {
+      newFilter = { ...filter, [section]: option };
+    } else {
+      delete newFilter[section];
+    }
     setFilter(newFilter);
-    dispatch(fetchAllFilterProductsAsync(newFilter));
+    console.log("filter = ", newFilter);
   }
   return (
     <div>

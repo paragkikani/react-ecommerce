@@ -7,11 +7,13 @@ export function fetchAllProducts() {
 }
 
 export function fetchAllFilterProducts(filter) {
+  console.log("send Val : " + JSON.stringify(filter));
   let filterString = "";
 
   for (let key in filter) {
     filterString += key + "=" + filter[key] + "&";
   }
+
   console.log(filterString);
   return new Promise(async (resolve) => {
     const responce = await fetch(
