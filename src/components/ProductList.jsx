@@ -15,12 +15,12 @@ import {
   selectBrands,
   fetchAllBrandsAsync,
   fetchAllFilterProductsAsync,
-  fetchAllProductsAsync,
   selectAllProducts,
   totalItems,
+  fetchCategoryAsync,
+  selectCategory,
 } from "../redux/slice/productListSlice";
 import { PER_PAGE_ITEM_LIMIT } from "../constant";
-import { fetchCategory } from "../redux/slice/ProductAPI";
 
 const sortOptions = [
   { name: "Best Rating", sort: "-rating", current: false },
@@ -39,6 +39,7 @@ function ProductList() {
   const allItemsCount = useSelector(totalItems);
   const products = useSelector(selectAllProducts);
   const allBrands = useSelector(selectBrands);
+  const category = useSelector(selectCategory);
   
   const [filter, setFilter] = useState({});
   const [sort, setSort] = useState({});
@@ -46,14 +47,12 @@ function ProductList() {
 
   useEffect(() => {
     dispatch(fetchAllFilterProductsAsync({filter, sort, page}));
-    
-    console.log("brans L " ,allBrands);
   }, [dispatch, filter, sort, page]);
 
     useEffect(()=>{
       dispatch(fetchAllBrandsAsync());
-    dispatch(fetchCategory());
-    },dispatch);
+      dispatch(fetchCategoryAsync());
+    },[dispatch]);
   
 
   function handlePageClick(index) {
@@ -95,7 +94,7 @@ function ProductList() {
     {
       id: "category",
       name: "Category",
-      options: allBrands,
+      options: category,
     },
     {
       id: "brand",
@@ -367,7 +366,7 @@ function ProductGrid({ products }) {
               key={product.id}
               className="group relative border-2 p-2 border-gray-300"
             >
-              <Link to="/product-details">
+              <Link to={`/product-details/${product.id}`}>
                 <div
                   className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 
                               lg:aspect-none group-hover:opacity-75 lg:h-60"
@@ -404,7 +403,7 @@ function ProductGrid({ products }) {
 }
 
 function FilterOption({ handleOnFilterChange, filters }) {
-  console.log("fOption:",filters);
+  
   return (
     <form className="hidden lg:block">
       <h3 className="sr-only">Categories</h3>

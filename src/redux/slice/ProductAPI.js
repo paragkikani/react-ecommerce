@@ -8,6 +8,13 @@ export function fetchAllProducts() {
   });
 }
 
+export function fetchSelectedProducts(id) {
+  return new Promise(async (resolve) => {
+    const responce = await fetch("http://localhost:8080/products/" + id);
+    const data = await responce.json();
+    resolve({ data });
+  });
+}
 //TODO
 // Page = ?_page=1&_limit=10
 // Filter = ?category=smartphones
