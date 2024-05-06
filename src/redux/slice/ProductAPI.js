@@ -34,26 +34,25 @@ export function fetchAllFilterProducts(filter, sort, page) {
     }
   }
 
-    if(sort._sort){
-    filterString +=   "_sort=" + sort._sort + "&";
-    }
+  if (sort._sort) {
+    filterString += "_sort=" + sort._sort + "&";
+  }
 
   // Paggination
   filterString += "_page=" + page + "&_per_page=" + PER_PAGE_ITEM_LIMIT + "&";
 
   console.log(
     "filterString: ",
-    "http://localhost:8080/products?" + filterString
+    "http://localhost:8080/products?" + filterString,
   );
 
   return new Promise(async (resolve) => {
-
     const responce = await fetch(
-      "http://localhost:8080/products?" + filterString
+      "http://localhost:8080/products?" + filterString,
     );
     const data = await responce.json();
-    
-    resolve({  data });
+
+    resolve({ data });
   });
 }
 

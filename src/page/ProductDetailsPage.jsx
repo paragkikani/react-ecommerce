@@ -5,8 +5,9 @@ import Navbar from "../components/Navbar";
 function ProductDetailsPage() {
   return (
     <div>
-      <Navbar />
-      <ProductDetails />
+      <Navbar>
+        <ProductDetails />
+      </Navbar>
     </div>
   );
 }

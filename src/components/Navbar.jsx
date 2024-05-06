@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -6,6 +6,9 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { getCartAsync, selectCart } from "../redux/slice/cartSlice";
+import { selectUser } from "../redux/slice/authSlice";
 
 const user = {
   name: "Tom Cook",
@@ -18,20 +21,27 @@ const navigation = [
   { name: "Team", href: "#", current: false },
 ];
 const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
+  { name: "Your Profile", link: "/" },
+  { name: "Settings", link: "/" },
+  { name: "Sign out", link: "/login" },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function clickToCart() {}
-
 function Navbar({ children }) {
+  const allItems = useSelector(selectCart);
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCartAsync(user.id));
+  }, [dispatch]);
+
   return (
     <>
+      {allItems?.allItems}
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
@@ -58,10 +68,9 @@ function Navbar({ children }) {
                               item.current
                                 ? "bg-gray-900 text-white"
                                 : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                              "rounded-md px-3 py-2 text-sm font-medium"
+                              "rounded-md px-3 py-2 text-sm font-medium",
                             )}
-                            aria-current={item.current ? "page" : undefined}
-                          >
+                            aria-current={item.current ? "page" : undefined}>
                             {item.name}
                           </a>
                         ))}
@@ -74,8 +83,7 @@ function Navbar({ children }) {
                         <button
                           type="button"
                           className="relative rounded-full p-1 text-gray-400
-                         hover:text-white "
-                        >
+                         hover:text-white ">
                           <span className="absolute -inset-1.5" />
                           <span className="sr-only">View cart</span>
                           <ShoppingCartIcon
@@ -84,12 +92,13 @@ function Navbar({ children }) {
                           />
                         </button>
                       </Link>
-                      <span
-                        className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 
-                    px-1 py-0 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10"
-                      >
-                        3
-                      </span>
+                      {allItems.length > 0 && (
+                        <span
+                          className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 
+                    px-1 py-0 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                          {allItems.reduce((qty, x) => x.quntity + qty, 0)}
+                        </span>
+                      )}
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
                         <div>
@@ -110,21 +119,19 @@ function Navbar({ children }) {
                           enterTo="transform opacity-100 scale-100"
                           leave="transition ease-in duration-75"
                           leaveFrom="transform opacity-100 scale-100"
-                          leaveTo="transform opacity-0 scale-95"
-                        >
+                          leaveTo="transform opacity-0 scale-95">
                           <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
                                 {({ active }) => (
-                                  <a
-                                    href={item.href}
+                                  <Link
+                                    to={item.link}
                                     className={classNames(
                                       active ? "bg-gray-100" : "",
-                                      "block px-4 py-2 text-sm text-gray-700"
-                                    )}
-                                  >
+                                      "block px-4 py-2 text-sm text-gray-700",
+                                    )}>
                                     {item.name}
-                                  </a>
+                                  </Link>
                                 )}
                               </Menu.Item>
                             ))}
@@ -165,10 +172,9 @@ function Navbar({ children }) {
                         item.current
                           ? "bg-gray-900 text-white"
                           : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "block rounded-md px-3 py-2 text-base font-medium"
+                        "block rounded-md px-3 py-2 text-base font-medium",
                       )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
+                      aria-current={item.current ? "page" : undefined}>
                       {item.name}
                     </Disclosure.Button>
                   ))}
@@ -179,7 +185,7 @@ function Navbar({ children }) {
                       <img
                         className="h-10 w-10 rounded-full"
                         src={user.imageUrl}
-                        alt=""
+                        alt={user.name}
                       />
                     </div>
                     <div className="ml-3">
@@ -195,8 +201,7 @@ function Navbar({ children }) {
                         type="button"
                         className="relative ml-auto flex-shrink-0 rounded-full  p-1 text-gray-400
                        hover:text-white focus:outline-none 
-                       "
-                      >
+                       ">
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">View notifications</span>
                         <ShoppingCartIcon
@@ -205,12 +210,13 @@ function Navbar({ children }) {
                         />
                       </button>
                     </Link>
-                    <span
-                      className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 
-                    px-1 py-0 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10"
-                    >
-                      3
-                    </span>
+                    {allItems.length > 0 && (
+                      <span
+                        className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 
+                    px-1 py-0 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                        {allItems.reduce((qty, x) => x.quntity + qty, 0)}
+                      </span>
+                    )}
                   </div>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => (
@@ -218,8 +224,7 @@ function Navbar({ children }) {
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                      >
+                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
                         {item.name}
                       </Disclosure.Button>
                     ))}

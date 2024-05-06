@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { createUserAsync, selectUser } from "../redux/slice/authSlice";
 
 function Signup() {
@@ -15,6 +15,7 @@ function Signup() {
 
   return (
     <>
+      {user && <Navigate to="/" replace={true}></Navigate>}
       <div className=" flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
@@ -32,7 +33,11 @@ function Signup() {
             className="space-y-6"
             onSubmit={handleSubmit((data) => {
               dispatch(
-                createUserAsync({ email: data.email, password: data.password }),
+                createUserAsync({
+                  email: data.email,
+                  password: data.password,
+                  addresses: [],
+                }),
               );
             })}>
             <div>

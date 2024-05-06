@@ -10,28 +10,33 @@ export function createUser(user) {
   });
 }
 
-export function checkUser(user) {
+export function updateUser(update) {
   return new Promise(async (resolve) => {
+    const responce = await fetch(`http://localhost:8080/users/${update.id}`, {
+      method: "PATCH",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(update),
+    });
+    console.log("apiUpdaye:", update);
+    const data = await responce.json();
+    resolve({ data });
+  });
+}
+
+export function checkUser(user) {
+  return new Promise(async (resolve, rejected) => {
     const responce = await fetch(
       "http://localhost:8080/users?email=" + user.email,
-      {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(user),
-      },
     );
     const data = await responce.json();
-
     if (data.length > 0) {
       if (data[0].password === user.password) {
-        console.log("login success");
         resolve({ data });
       } else {
-        console.log("wrong password");
+        rejected({ message: "wrong password" });
       }
-      console.log("data: ", { data });
     } else {
-      console.log("wrong all");
+      rejected({ message: "something Wrong!!" });
     }
   });
 }

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { checkUser } from "../redux/slice/authAPI";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, Navigate } from "react-router-dom";
+import {
+  checkUserAsync,
+  selectError,
+  selectUser,
+} from "../redux/slice/authSlice";
 
 function Login() {
   const {
@@ -11,8 +15,12 @@ function Login() {
     formState: { errors },
   } = useForm();
   const dispatch = useDispatch();
+  const loginError = useSelector(selectError);
+  const loginUser = useSelector(selectUser);
+
   return (
     <>
+      {loginUser && <Navigate to="/" replace={true}></Navigate>}
       <div className=" flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
@@ -30,8 +38,9 @@ function Login() {
             noValidate
             className="space-y-6"
             onSubmit={handleSubmit((data) => {
+              console.log("login data: ", data);
               dispatch(
-                checkUser({ email: data.email, password: data.password }),
+                checkUserAsync({ email: data.email, password: data.password }),
               );
             })}>
             <div>
@@ -54,8 +63,8 @@ function Login() {
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
-              {errors.email && (
-                <p className="text-red-500 text-sm">{errors.email.message}</p>
+              {loginError && (
+                <p className="text-red-500 text-sm">{loginError}</p>
               )}
             </div>
 
@@ -83,11 +92,11 @@ function Login() {
                   type="password"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
-                {errors.password && (
+                {/* {errors.password && (
                   <p className="text-red-500 text-sm">
                     {errors.password.message}
                   </p>
-                )}
+                )} */}
               </div>
             </div>
 
