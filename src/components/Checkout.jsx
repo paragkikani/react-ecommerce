@@ -65,13 +65,11 @@ function Checkout() {
     dispatch(placeOrderAsync(order));
 
     // cart khali
-    dispatch(resetCartAsync(user.id));
-    // success page redirect
   }
   return (
     <>
       {!carts.length && <Navigate to="/" replace={true}></Navigate>}
-      {order && <Navigate to={"order-success/" + order.id}></Navigate>}
+      {order && <Navigate to={"/order-success/" + order.id}></Navigate>}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
           <div className="lg:col-span-3">

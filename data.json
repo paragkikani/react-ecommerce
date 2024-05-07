@@ -2501,31 +2501,11 @@
       ],
       "userId": "6d16",
       "quntity": 1
-    },
-    {
-      "id": "11ed",
-      "title": "Samsung Galaxy Book",
-      "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
-      "price": 1499,
-      "discountPercentage": 4.15,
-      "rating": 4.25,
-      "stock": 50,
-      "brand": "Samsung",
-      "category": "laptops",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/7/1.jpg",
-        "https://cdn.dummyjson.com/product-images/7/2.jpg",
-        "https://cdn.dummyjson.com/product-images/7/3.jpg",
-        "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
-      ],
-      "userId": "1328",
-      "quntity": 1
     }
   ],
   "orders": [
     {
-      "id": "da64",
+      "id": "e90e",
       "user": {
         "id": "1328",
         "email": "paragkikani@gmail.com",
@@ -2562,98 +2542,24 @@
       },
       "items": [
         {
-          "id": "fb99",
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
+          "id": "8a79",
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
           "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
           "images": [
-            "https://cdn.dummyjson.com/product-images/1/1.jpg",
-            "https://cdn.dummyjson.com/product-images/1/2.jpg",
-            "https://cdn.dummyjson.com/product-images/1/3.jpg",
-            "https://cdn.dummyjson.com/product-images/1/4.jpg",
-            "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
-          ],
-          "userId": "1328",
-          "quntity": 1
-        }
-      ],
-      "adress": {
-        "name": "parag kikani",
-        "email": "paragkikani@gmail.com",
-        "phone": "09924262262",
-        "street": "27, Madhavpark Society",
-        "city": "Surat",
-        "state": "Gujarat",
-        "pincode": "395010"
-      },
-      "payment": "cash",
-      "orderStatus": "order Placed"
-    },
-    {
-      "id": "6e77",
-      "user": {
-        "id": "1328",
-        "email": "paragkikani@gmail.com",
-        "password": "1",
-        "addresses": [
-          {
-            "name": "parag kikani",
-            "email": "paragkikani@gmail.com",
-            "phone": "09924262262",
-            "street": "27, Madhavpark Society",
-            "city": "Surat",
-            "state": "Gujarat",
-            "pincode": "395010"
-          },
-          {
-            "name": "parag kikani",
-            "email": "paragkikani@gmail.com",
-            "phone": "09924262262",
-            "street": "c 602 Saral Heights",
-            "city": "Surat",
-            "state": "Gujarat",
-            "pincode": "395010"
-          },
-          {
-            "name": "parag kikani",
-            "email": "paragkikani@gmail.com",
-            "phone": "2122131321",
-            "street": "27, vasudev Society",
-            "city": "baroda",
-            "state": "Gujarat",
-            "pincode": "395010"
-          }
-        ]
-      },
-      "items": [
-        {
-          "id": "17bd",
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/2/1.jpg",
-            "https://cdn.dummyjson.com/product-images/2/2.jpg",
-            "https://cdn.dummyjson.com/product-images/2/3.jpg",
-            "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            "https://cdn.dummyjson.com/product-images/3/1.jpg"
           ],
           "userId": "1328",
           "quntity": 1
         },
         {
-          "id": "fb1a",
+          "id": "be2d",
           "title": "MacBook Pro",
           "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
           "price": 1749,
@@ -2686,7 +2592,7 @@
       "orderStatus": "order Placed"
     },
     {
-      "id": "18ba",
+      "id": "9031",
       "user": {
         "id": "1328",
         "email": "paragkikani@gmail.com",
@@ -2723,7 +2629,7 @@
       },
       "items": [
         {
-          "id": "9248",
+          "id": "7222",
           "title": "iPhone 9",
           "description": "An apple mobile which is nothing like apple",
           "price": 549,
@@ -2742,137 +2648,22 @@
           ],
           "userId": "1328",
           "quntity": 1
-        }
-      ],
-      "adress": {
-        "name": "parag kikani",
-        "email": "paragkikani@gmail.com",
-        "phone": "2122131321",
-        "street": "27, vasudev Society",
-        "city": "baroda",
-        "state": "Gujarat",
-        "pincode": "395010"
-      },
-      "payment": "cash",
-      "orderStatus": "order Placed"
-    },
-    {
-      "id": "db85",
-      "user": {
-        "id": "1328",
-        "email": "paragkikani@gmail.com",
-        "password": "1",
-        "addresses": [
-          {
-            "name": "parag kikani",
-            "email": "paragkikani@gmail.com",
-            "phone": "09924262262",
-            "street": "27, Madhavpark Society",
-            "city": "Surat",
-            "state": "Gujarat",
-            "pincode": "395010"
-          },
-          {
-            "name": "parag kikani",
-            "email": "paragkikani@gmail.com",
-            "phone": "09924262262",
-            "street": "c 602 Saral Heights",
-            "city": "Surat",
-            "state": "Gujarat",
-            "pincode": "395010"
-          },
-          {
-            "name": "parag kikani",
-            "email": "paragkikani@gmail.com",
-            "phone": "2122131321",
-            "street": "27, vasudev Society",
-            "city": "baroda",
-            "state": "Gujarat",
-            "pincode": "395010"
-          }
-        ]
-      },
-      "items": [
+        },
         {
-          "id": "9248",
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
+          "id": "d27d",
+          "title": "Huawei P30",
+          "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+          "price": 499,
+          "discountPercentage": 10.58,
+          "rating": 4.09,
+          "stock": 32,
+          "brand": "Huawei",
           "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
           "images": [
-            "https://cdn.dummyjson.com/product-images/1/1.jpg",
-            "https://cdn.dummyjson.com/product-images/1/2.jpg",
-            "https://cdn.dummyjson.com/product-images/1/3.jpg",
-            "https://cdn.dummyjson.com/product-images/1/4.jpg",
-            "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
-          ],
-          "userId": "1328",
-          "quntity": 1
-        }
-      ],
-      "adress": null,
-      "payment": "cash",
-      "orderStatus": "order Placed"
-    },
-    {
-      "id": "6562",
-      "user": {
-        "id": "1328",
-        "email": "paragkikani@gmail.com",
-        "password": "1",
-        "addresses": [
-          {
-            "name": "parag kikani",
-            "email": "paragkikani@gmail.com",
-            "phone": "09924262262",
-            "street": "27, Madhavpark Society",
-            "city": "Surat",
-            "state": "Gujarat",
-            "pincode": "395010"
-          },
-          {
-            "name": "parag kikani",
-            "email": "paragkikani@gmail.com",
-            "phone": "09924262262",
-            "street": "c 602 Saral Heights",
-            "city": "Surat",
-            "state": "Gujarat",
-            "pincode": "395010"
-          },
-          {
-            "name": "parag kikani",
-            "email": "paragkikani@gmail.com",
-            "phone": "2122131321",
-            "street": "27, vasudev Society",
-            "city": "baroda",
-            "state": "Gujarat",
-            "pincode": "395010"
-          }
-        ]
-      },
-      "items": [
-        {
-          "id": "8789",
-          "title": "OPPOF19",
-          "description": "OPPO F19 is officially announced on April 2021.",
-          "price": 280,
-          "discountPercentage": 17.91,
-          "rating": 4.3,
-          "stock": 123,
-          "brand": "OPPO",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/4/1.jpg",
-            "https://cdn.dummyjson.com/product-images/4/2.jpg",
-            "https://cdn.dummyjson.com/product-images/4/3.jpg",
-            "https://cdn.dummyjson.com/product-images/4/4.jpg",
-            "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
+            "https://cdn.dummyjson.com/product-images/5/1.jpg",
+            "https://cdn.dummyjson.com/product-images/5/2.jpg",
+            "https://cdn.dummyjson.com/product-images/5/3.jpg"
           ],
           "userId": "1328",
           "quntity": 1
@@ -2884,6 +2675,208 @@
         "phone": "09924262262",
         "street": "27, Madhavpark Society",
         "city": "Surat",
+        "state": "Gujarat",
+        "pincode": "395010"
+      },
+      "payment": "card",
+      "orderStatus": "order Placed"
+    },
+    {
+      "id": "ee9e",
+      "user": {
+        "id": "6d16",
+        "email": "asd@asd.asd",
+        "password": "1",
+        "addresses": [
+          {
+            "name": "parag kikani",
+            "email": "paragkikani@gmail.com",
+            "phone": "09924262262",
+            "street": "27, Madhavpark Society",
+            "city": "Surat",
+            "state": "Gujarat",
+            "pincode": "395010"
+          },
+          {
+            "name": "parag kikani",
+            "email": "paragkikani@gmail.com",
+            "phone": "09924262262",
+            "street": "c 602 Saral Heights",
+            "city": "Surat",
+            "state": "Gujarat",
+            "pincode": "395010"
+          },
+          {
+            "name": "parag kikani",
+            "email": "paragkikani@gmail.com",
+            "phone": "2122131321",
+            "street": "27, vasudev Society",
+            "city": "baroda",
+            "state": "Gujarat",
+            "pincode": "395010"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "915e",
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/2/1.jpg",
+            "https://cdn.dummyjson.com/product-images/2/2.jpg",
+            "https://cdn.dummyjson.com/product-images/2/3.jpg",
+            "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+          ],
+          "userId": "1328",
+          "quntity": 1
+        }
+      ],
+      "adress": {
+        "name": "parag kikani",
+        "email": "paragkikani@gmail.com",
+        "phone": "09924262262",
+        "street": "c 602 Saral Heights",
+        "city": "Surat",
+        "state": "Gujarat",
+        "pincode": "395010"
+      },
+      "payment": "cash",
+      "orderStatus": "order Placed"
+    },
+    {
+      "id": "c0c7",
+      "user": {
+        "id": "6d16",
+        "email": "asd@asd.asd",
+        "password": "1",
+        "addresses": [
+          {
+            "name": "parag kikani",
+            "email": "paragkikani@gmail.com",
+            "phone": "09924262262",
+            "street": "27, Madhavpark Society",
+            "city": "Surat",
+            "state": "Gujarat",
+            "pincode": "395010"
+          },
+          {
+            "name": "parag kikani",
+            "email": "paragkikani@gmail.com",
+            "phone": "09924262262",
+            "street": "c 602 Saral Heights",
+            "city": "Surat",
+            "state": "Gujarat",
+            "pincode": "395010"
+          },
+          {
+            "name": "parag kikani",
+            "email": "paragkikani@gmail.com",
+            "phone": "2122131321",
+            "street": "27, vasudev Society",
+            "city": "baroda",
+            "state": "Gujarat",
+            "pincode": "395010"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "4c7f",
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/2/1.jpg",
+            "https://cdn.dummyjson.com/product-images/2/2.jpg",
+            "https://cdn.dummyjson.com/product-images/2/3.jpg",
+            "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+          ],
+          "userId": "1328",
+          "quntity": 1
+        }
+      ],
+      "adress": null,
+      "payment": "cash",
+      "orderStatus": "order Placed"
+    },
+    {
+      "id": "5375",
+      "user": {
+        "id": "1328",
+        "email": "paragkikani@gmail.com",
+        "password": "1",
+        "addresses": [
+          {
+            "name": "parag kikani",
+            "email": "paragkikani@gmail.com",
+            "phone": "09924262262",
+            "street": "27, Madhavpark Society",
+            "city": "Surat",
+            "state": "Gujarat",
+            "pincode": "395010"
+          },
+          {
+            "name": "parag kikani",
+            "email": "paragkikani@gmail.com",
+            "phone": "09924262262",
+            "street": "c 602 Saral Heights",
+            "city": "Surat",
+            "state": "Gujarat",
+            "pincode": "395010"
+          },
+          {
+            "name": "parag kikani",
+            "email": "paragkikani@gmail.com",
+            "phone": "2122131321",
+            "street": "27, vasudev Society",
+            "city": "baroda",
+            "state": "Gujarat",
+            "pincode": "395010"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "3240",
+          "title": "perfume Oil",
+          "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+          "price": 13,
+          "discountPercentage": 8.4,
+          "rating": 4.26,
+          "stock": 65,
+          "brand": "Impression of Acqua Di Gio",
+          "category": "fragrances",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/11/1.jpg",
+            "https://cdn.dummyjson.com/product-images/11/2.jpg",
+            "https://cdn.dummyjson.com/product-images/11/3.jpg",
+            "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"
+          ],
+          "userId": "1328",
+          "quntity": 1
+        }
+      ],
+      "adress": {
+        "name": "parag kikani",
+        "email": "paragkikani@gmail.com",
+        "phone": "2122131321",
+        "street": "27, vasudev Society",
+        "city": "baroda",
         "state": "Gujarat",
         "pincode": "395010"
       },

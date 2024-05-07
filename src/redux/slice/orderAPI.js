@@ -9,3 +9,11 @@ export function placeOrder(order) {
     resolve({ data });
   });
 }
+
+export function fetchOrderByUser(id) {
+  return new Promise(async (resolve) => {
+    const responce = await fetch(`http://localhost:8080/orders/?user.id=${id}`);
+    const data = await responce.json();
+    resolve({ data });
+  });
+}

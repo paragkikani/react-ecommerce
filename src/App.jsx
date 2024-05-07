@@ -12,6 +12,8 @@ import { getCartAsync, selectCart } from "./redux/slice/cartSlice";
 import { selectUser } from "./redux/slice/authSlice";
 import PageNotFound from "./page/PageNotFound";
 import SuccessOrder from "./page/SuccessOrder";
+import MyOrderPage from "./page/MyOrderPage";
+import ProfilePage from "./page/ProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -55,8 +57,16 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "order-success/:id",
+    path: "/order-success/:id",
     element: <SuccessOrder />,
+  },
+  {
+    path: "/my-order",
+    element: <MyOrderPage />,
+  },
+  {
+    path: "/profile",
+    element: <ProfilePage />,
   },
   {
     path: "*",

@@ -1,10 +1,23 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, Navigate, useParams } from "react-router-dom";
+import { selectUser } from "../redux/slice/authSlice";
+import { resetCartAsync } from "../redux/slice/cartSlice";
+import { resetOrder } from "../redux/slice/orderSlice";
 
 function SuccessOrder() {
   const param = useParams();
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser);
+
+  useEffect(() => {
+    dispatch(resetCartAsync(user.id));
+    dispatch(resetOrder());
+  }, [dispatch]);
+  // success page redirect
   return (
     <>
+      {!user.id && <Navigate to="/" replace={true}></Navigate>}
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
           <p className="text-base font-semibold text-indigo-600">

@@ -21,8 +21,8 @@ const navigation = [
   { name: "Team", href: "#", current: false },
 ];
 const userNavigation = [
-  { name: "Your Profile", link: "/" },
-  { name: "Settings", link: "/" },
+  { name: "Your Profile", link: "/profile" },
+  { name: "My Order", link: "/my-order" },
   { name: "Sign out", link: "/login" },
 ];
 
