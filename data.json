@@ -2439,31 +2439,22 @@
       "password": "1",
       "addresses": [
         {
-          "name": "parag kikani",
-          "email": "paragkikani@gmail.com",
-          "phone": "09924262262",
+          "name": "Bansee",
+          "email": "banseeeeee@gmail.com",
+          "phone": "5421543565",
           "street": "27, Madhavpark Society",
-          "city": "Surat",
-          "state": "Gujarat",
-          "pincode": "395010"
-        },
-        {
-          "name": "parag kikani",
-          "email": "paragkikani@gmail.com",
-          "phone": "09924262262",
-          "street": "c 602 Saral Heights",
-          "city": "Surat",
-          "state": "Gujarat",
-          "pincode": "395010"
-        },
-        {
-          "name": "parag kikani",
-          "email": "paragkikani@gmail.com",
-          "phone": "2122131321",
-          "street": "27, vasudev Society",
           "city": "baroda",
+          "state": "maharashtra",
+          "pincode": "123456"
+        },
+        {
+          "name": "Divyang DD",
+          "email": "DDivyanf@gmail.com",
+          "phone": "7878546532",
+          "street": " 704  varj antoniya",
+          "city": "Surat",
           "state": "Gujarat",
-          "pincode": "395010"
+          "pincode": "395006"
         }
       ]
     },
