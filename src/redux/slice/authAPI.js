@@ -40,3 +40,8 @@ export function checkUser(user) {
     }
   });
 }
+export function logout(userId) {
+  return new Promise(async (resolve) => {
+    resolve({ data: "success" });
+  });
+}

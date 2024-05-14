@@ -32,7 +32,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function ProductList() {
+function AdminProductList() {
   const dispatch = useDispatch();
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const allItemsCount = useSelector(totalItems);
@@ -159,7 +159,7 @@ function ProductList() {
   );
 }
 
-export default ProductList;
+export default AdminProductList;
 
 function MobileFilter({
   filters,
@@ -352,36 +352,43 @@ function ProductGrid({ products }) {
               <div
                 key={product.id}
                 className="group relative border-2 p-2 border-gray-300">
-                <Link to={`/product-details/${product.id}`}>
-                  <div
-                    className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 
+                <div
+                  className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 
                               lg:aspect-none group-hover:opacity-75 lg:h-60">
-                    <img
-                      src={product.thumbnail}
-                      alt={product.title}
-                      className="h-full w-full object-cover lg:h-full lg:w-full"
-                    />
-                  </div>
-                  <div className="mt-4 flex justify-between">
-                    <div>
-                      <h3 className="text-sm text-gray-700">
-                        <a href={product.href}>
-                          <span
-                            aria-hidden="true"
-                            className="absolute inset-0"
-                          />
-                          {product.title}
-                        </a>
-                      </h3>
-                      <p className="mt-1 text-sm text-gray-500">
-                        {product.rating}
-                      </p>
-                    </div>
-                    <p className="text-sm font-medium text-gray-900">
-                      {product.price}
+                  <img
+                    src={product.thumbnail}
+                    alt={product.title}
+                    className="h-full w-full object-cover lg:h-full lg:w-full"
+                  />
+                </div>
+                <div className="mt-4 flex justify-between">
+                  <div>
+                    <h3 className="text-sm text-gray-700">
+                      <a href={product.href}>
+                        <span aria-hidden="true" className="absolute inset-0" />
+                        {product.title}
+                      </a>
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-500">
+                      {product.rating}
                     </p>
                   </div>
-                </Link>
+                  <p className="text-sm font-medium text-gray-900">
+                    {product.price}
+                  </p>
+                </div>
+
+                <div className="relative flex justify-between">
+                  <Link to={`/admin/product-edit/${product.id}`}>
+                    <div className=" cursor-pointer  font-medium text-indigo-600 hover:text-indigo-500">
+                      Edit
+                    </div>
+                  </Link>
+
+                  <div className="cursor-pointer font-medium text-red-600 hover:text-red-500">
+                    Remove
+                  </div>
+                </div>
               </div>
             ))}
         </div>

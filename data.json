@@ -2445,7 +2445,7 @@
           "street": "27, Madhavpark Society",
           "city": "baroda",
           "state": "maharashtra",
-          "pincode": "123456"
+          "pincode": "123457"
         },
         {
           "name": "Divyang DD",
@@ -2455,45 +2455,45 @@
           "city": "Surat",
           "state": "Gujarat",
           "pincode": "395006"
+        },
+        {
+          "name": "darshan",
+          "email": "dasubhai@gmail.asd",
+          "phone": "787878787878",
+          "street": "greenplaza",
+          "city": "dubai",
+          "state": "velly",
+          "pincode": "885558"
         }
-      ]
+      ],
+      "access": "admin"
     },
     {
       "id": "6d16",
       "email": "asd@asd.asd",
       "password": "2",
-      "addresses": []
+      "addresses": [
+        {
+          "name": "asd asd",
+          "email": "asd@asd.asd",
+          "phone": "452565958575",
+          "street": "141, stareaa streer",
+          "city": "pune ",
+          "state": "kerala",
+          "pincode": "456585"
+        }
+      ],
+      "access": "user"
     },
     {
       "id": "96db",
       "email": "demo@asd.asd",
       "password": "1234Asdf",
-      "addresses": []
+      "addresses": [],
+      "access": "user"
     }
   ],
-  "carts": [
-    {
-      "id": "15",
-      "title": "Eau De Perfume Spray",
-      "description": "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
-      "price": 30,
-      "discountPercentage": 10.99,
-      "rating": 4.7,
-      "stock": 105,
-      "brand": "Lord - Al-Rehab",
-      "category": "fragrances",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/15/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/15/1.jpg",
-        "https://cdn.dummyjson.com/product-images/15/2.jpg",
-        "https://cdn.dummyjson.com/product-images/15/3.jpg",
-        "https://cdn.dummyjson.com/product-images/15/4.jpg",
-        "https://cdn.dummyjson.com/product-images/15/thumbnail.jpg"
-      ],
-      "userId": "6d16",
-      "quntity": 1
-    }
-  ],
+  "carts": [],
   "orders": [
     {
       "id": "e90e",
@@ -2872,6 +2872,111 @@
         "pincode": "395010"
       },
       "payment": "cash",
+      "orderStatus": "order Placed"
+    },
+    {
+      "id": "5790",
+      "user": {
+        "id": "6d16",
+        "email": "asd@asd.asd",
+        "password": "2",
+        "addresses": []
+      },
+      "items": [
+        {
+          "id": "15",
+          "title": "Eau De Perfume Spray",
+          "description": "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
+          "price": 30,
+          "discountPercentage": 10.99,
+          "rating": 4.7,
+          "stock": 105,
+          "brand": "Lord - Al-Rehab",
+          "category": "fragrances",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/15/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/15/1.jpg",
+            "https://cdn.dummyjson.com/product-images/15/2.jpg",
+            "https://cdn.dummyjson.com/product-images/15/3.jpg",
+            "https://cdn.dummyjson.com/product-images/15/4.jpg",
+            "https://cdn.dummyjson.com/product-images/15/thumbnail.jpg"
+          ],
+          "userId": "6d16",
+          "quntity": 1
+        }
+      ],
+      "adress": null,
+      "payment": "cash",
+      "orderStatus": "order Placed"
+    },
+    {
+      "id": "97a1",
+      "user": {
+        "id": "1328",
+        "email": "paragkikani@gmail.com",
+        "password": "1",
+        "addresses": [
+          {
+            "name": "Bansee",
+            "email": "banseeeeee@gmail.com",
+            "phone": "5421543565",
+            "street": "27, Madhavpark Society",
+            "city": "baroda",
+            "state": "maharashtra",
+            "pincode": "123456"
+          },
+          {
+            "name": "Divyang DD",
+            "email": "DDivyanf@gmail.com",
+            "phone": "7878546532",
+            "street": " 704  varj antoniya",
+            "city": "Surat",
+            "state": "Gujarat",
+            "pincode": "395006"
+          },
+          {
+            "name": "darshan",
+            "email": "dasubhai@gmail.asd",
+            "phone": "787878787878",
+            "street": "greenplaza",
+            "city": "dubai",
+            "state": "velly",
+            "pincode": "885558"
+          }
+        ],
+        "access": "admin"
+      },
+      "items": [
+        {
+          "id": "aee2",
+          "title": "LouisWill Men Sunglasses",
+          "description": "LouisWill Men Sunglasses Polarized Sunglasses UV400 Sunglasses Day Night Dual Use Safety Driving Night Vision Eyewear AL-MG Frame Sun Glasses with Free Box for Drivers",
+          "price": 50,
+          "discountPercentage": 11.27,
+          "rating": 4.98,
+          "stock": 92,
+          "brand": "LouisWill",
+          "category": "sunglasses",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/85/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/85/1.jpg",
+            "https://cdn.dummyjson.com/product-images/85/2.jpg",
+            "https://cdn.dummyjson.com/product-images/85/thumbnail.jpg"
+          ],
+          "userId": "1328",
+          "quntity": 1
+        }
+      ],
+      "adress": {
+        "name": "Bansee",
+        "email": "banseeeeee@gmail.com",
+        "phone": "5421543565",
+        "street": "27, Madhavpark Society",
+        "city": "baroda",
+        "state": "maharashtra",
+        "pincode": "123456"
+      },
+      "payment": "card",
       "orderStatus": "order Placed"
     }
   ]

@@ -1,17 +1,13 @@
-
 {
-"compilerOptions": {
-"module": "commonjs",
-"target": "es2016",
-"jsx": "preserve",
-"baseUrl": "./src",
-"paths": {
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2016",
+    "jsx": "preserve",
+    "baseUrl": "./src",
+    "paths": {
       "*": ["*", "redux/*"]
     },
-"checkJs": true
-},
-"exclude": [
-"node_modules",
-"**/node_modules/*"
-]
+    "checkJs": true
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
 }

@@ -14,8 +14,29 @@ import PageNotFound from "./page/PageNotFound";
 import SuccessOrder from "./page/SuccessOrder";
 import MyOrderPage from "./page/MyOrderPage";
 import ProfilePage from "./page/ProfilePage";
+import LogoutPage from "./page/LogoutPage";
+import ForgotPasswordPage from "./page/ForgotPasswordPage";
+import AdminHome from "./page/AdminHome";
+import AdminProtected from "./components/AdminProtected";
+import AdminEditProductPage from "./page/AdminEditProductPage";
 
 const router = createBrowserRouter([
+  {
+    path: "/admin/products",
+    element: (
+      <AdminProtected>
+        <AdminHome />
+      </AdminProtected>
+    ),
+  },
+  {
+    path: "/admin/product-edit/:id",
+    element: (
+      <AdminProtected>
+        <AdminEditProductPage />
+      </AdminProtected>
+    ),
+  },
   {
     path: "/",
     element: (
@@ -67,6 +88,14 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <ProfilePage />,
+  },
+  {
+    path: "/logout",
+    element: <LogoutPage />,
+  },
+  {
+    path: "/forget-password",
+    element: <ForgotPasswordPage />,
   },
   {
     path: "*",

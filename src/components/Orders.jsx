@@ -78,33 +78,35 @@ function Orders() {
                   .00
                 </p>
               </div>
-              <div>
-                <h3 className="font-bold">Address</h3>
-                <div className="min-w-0   py-1 border-gray-200 border-[1px]">
-                  <div className="p-1 flex justify-between gap-x-6">
-                    <div className="flex min-w-0 gap-x-4 ">
-                      <div className="min-w-0 flex-auto ">
-                        <p className="text-sm font-semibold leading-6 text-gray-900">
-                          {order.adress.name}
+              {order.adress && (
+                <div>
+                  <h3 className="font-bold">Address</h3>
+                  <div className="min-w-0   py-1 border-gray-200 border-[1px]">
+                    <div className="p-1 flex justify-between gap-x-6">
+                      <div className="flex min-w-0 gap-x-4 ">
+                        <div className="min-w-0 flex-auto ">
+                          <p className="text-sm font-semibold leading-6 text-gray-900">
+                            {order.adress.name}
+                          </p>
+                          <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                            {order.adress.street}, {order.adress.city},
+                            {order.adress.state}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                        <p className="text-sm leading-6 text-gray-900">
+                          phone: {order.adress.phone}
                         </p>
-                        <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                          {order.adress.street}, {order.adress.city},
-                          {order.adress.state}
+
+                        <p className="mt-1 text-xs leading-5 text-gray-500">
+                          pincode: {order.adress.pincode}
                         </p>
                       </div>
                     </div>
-                    <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                      <p className="text-sm leading-6 text-gray-900">
-                        phone: {order.adress.phone}
-                      </p>
-
-                      <p className="mt-1 text-xs leading-5 text-gray-500">
-                        pincode: {order.adress.pincode}
-                      </p>
-                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         ))}

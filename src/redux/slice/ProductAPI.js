@@ -56,6 +56,21 @@ export function fetchAllFilterProducts(filter, sort, page) {
   });
 }
 
+export function updateProduct(update) {
+  return new Promise(async (resolve) => {
+    const responce = await fetch(
+      `http://localhost:8080/products/${update.id}`,
+      {
+        method: "PATCH",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(update),
+      },
+    );
+    const data = await responce.json();
+    resolve({ data });
+  });
+}
+
 export function fetchAllBrands() {
   return new Promise(async (resolve) => {
     const responce = await fetch("http://localhost:8080/brands");
